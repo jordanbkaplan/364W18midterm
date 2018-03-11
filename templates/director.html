@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Directors in the database</h1>
+{% for nam in names %}
+	{{nam.name}}
+	<br><br>
+{% endfor %}
+
+
+{% endblock %}

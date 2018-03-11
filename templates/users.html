@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Users in the database</h1>
+{% for nam in names %}
+	{{nam.username}}
+	<br><br>
+{% endfor %}
+
+
+{% endblock %}

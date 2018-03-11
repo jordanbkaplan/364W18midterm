@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Movies in the database</h1>
+<h2>{% if num_movies %}{{ num_movies }}{% else %}0{% endif %} possible movies saved. </h2>
+
+
+{% for nam in names %}
+    <li>{{ nam[0] }}<br>plot: {{ nam[2] }}<br> rating: {{ nam[1] }}<br><i>--directed by </i>{{ nam[3] }} </li><br><br>
+{% endfor %}
+
+
+{% endblock %}

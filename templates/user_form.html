@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+<form method="GET" action="http://localhost:5000/users">
+    {{ form.username.label() }}{{ form.username() }}<br><br>
+    {{ form.submit() }}
+    {{ form.hidden_tag() }}
+</form>
+<div>
+{% for message in get_flashed_messages() %}
+{{ message }}
+{% endfor %}
+</div>
+
+
+{% endblock %}
